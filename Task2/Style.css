@@ -1,0 +1,177 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set the default font family and size */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Style the header */
+header {
+  background-color: #343433;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Style the navigation */
+nav {
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Style the main content */
+main {
+  padding: 20px;
+}
+
+/* Style the heritage sites section */
+.heritage-sites {
+  margin-top: 20px;
+}
+
+.heritage-sites h2 {
+  margin-bottom: 10px;
+}
+
+.site {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+  cursor: pointer;
+  border-radius: 7px;
+  border: 2px solid rgb(206, 206, 252);
+}
+
+.site img {
+  float: left;
+  margin-right: 20px;
+}
+
+.site h3 {
+  margin-bottom: 10px;
+}
+
+.site p {
+  text-align: justify;
+}
+
+.site a {
+  color: #333;
+  text-decoration: none;
+}
+
+.site a:hover {
+  text-decoration: underline;
+}
+
+/* Style the footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+.site {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+  cursor: pointer;
+  border-radius: 7px;
+  border: 2px solid rgb(206, 206, 252);
+}
+
+/* Style the dark mode button */
+.btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #b4afaf;
+  transition: 0.5s ease-in-out;
+}
+.site:hover{
+  zoom: 150%;
+  /* background-color: #ccc; */
+  overflow:visible; 
+  transition: 0.5s ease-in-out;
+}
+.dark {
+  background-color: rgb(41, 41, 41);
+  color: whitesmoke;
+  transition: 0.6s ease-in-out;
+} 
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+header{
+  background-color: rgb(5, 113, 5);
+  text-align: center;
+}
+footer{
+  background-color: rgb(5, 113, 5);
+     text-align: center;
+}
+  nav ul li {
+      display: block;
+      margin-bottom: 10px;
+     
+  }
+  .site {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #eea2a2;
+      padding-bottom: 10px;
+  
+      border-radius: 2px;
+      border: 2px solid rgb(186, 106, 66);
+  }
+
+  .site img {
+      float:right;
+      width: 200px;
+      height: 250px;
+      
+  }
+
+  .site p {
+      text-align: left;
+  }
+
+  .site {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 20px;
+      cursor: pointer;
+      border-radius: 7px;
+      border: 2px solid rgb(206, 206, 252);
+  }
+
+  
+  .dark {
+      background-color: rgb(41, 41, 41);
+      color: whitesmoke;
+      transition: 0.6s ease-in-out;
+    } 
+
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title> <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <script>
+        //Function to validate the donation amount 
+        function validateDonationAmount() { let amountInput = document.getElementById("amount");
+         let amount = parseFloat(amountInput.value); 
+         if (isNaN(amount) || amount < 1) { amountInput.setCustomValidity("Please enter a valid donation amount.");
+          return false;
+         }
+           amountInput.setCustomValidity(""); 
+           return true; 
+        }
+        //   Function to handle the form submission 
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            if (!validateDonationAmount()) {
+                return;
+            }
+            //    Submit the form using the provided action and method 
+            event.target.submit();
+        } </script>
+</head>
+
+<body>
+    <header>
+        <h1>Donate to Preserve India's UNESCO Sites</h1>
+        <p>Your donation will help us in preserving and promoting India's cultural and natural heritage sites recognized
+            by UNESCO. Thank you for your support!</p>
+    </header>
+    <main>
+        <section>
+            <h2>Choose an Amount to Donate</h2>
+            <form action="http://127.0.0.1:3000/Task2/Paymentacceept.html" method="POST" onsubmit="handleFormSubmit(event)"> <label
+                    for="amount">₹</label> <input type="number" id="amount" name="amount" min="1" step="1" required
+                    oninput="validateDonationAmount()"> <button type="submit">Donate Now</button> </form>
+        </section>
+        <section>
+            <h2>Ways to Donate</h2>
+            <ul>
+                <li>Online Payment: Use the form above to make an online donation securely.</li>
+                <li>Bank Transfer: You can also make a direct bank transfer to our account. Contact us for details.</li>
+                <li>Cheque: Send a cheque payable to "UNESCO India" to our office address.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance regarding your donation, please contact us at <a
+                    href="mailto:donations@unescoindia.org">donations@unescoindia.org</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 UNESCO India. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
